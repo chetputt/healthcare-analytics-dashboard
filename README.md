@@ -1,4 +1,4 @@
-# Healthcare Analytics Dashboard
+  # Healthcare Analytics Dashboard
 
 ## Overview
 This project involves the usage of Excel and Power BI to create a healthcare dashboard in response to the business scenario below. The dashboard is interactive and mainly deals with grouping data based on which department of the hospital it is in.
@@ -16,12 +16,59 @@ The Kaggle link for this project's dataset can be found [here](https://www.kaggl
 * Power BI (Desktop)
 
 ## Methodology
-For this dashboard, I loaded the dataset in Pandas first. Using the library's functions, I took a brief overview of the dataset, such as the column names and data types for each column. I adjusted the columns as I saw fit, and loaded the edited dataset into **Excel**. 
+For this dashboard, I loaded the dataset in Pandas first. Using the library's functions, I took a brief overview of the dataset, such as the column names and data types for each column. I adjusted the columns as I saw fit, and loaded the edited dataset into **Excel**. I then created two pivot tables: one that focused on stats by department, and one that focused on distribution based on month and department. After my Excel analysis, I utilized **Power BI** to create a basic dashboard that helped visualize my findings and provided relevant information to the business scenario.  
 
-Changes made from the original dataset:
+Actions done with Pandas:
 * Split the "visit_date" column into "date" and "visit_time" columns
 * Turned the new "date" column into a datetime type
+* Checked for missing values
+
+Excel Usage:
+* Created Pivot Tables for department and monthly data
+
+Power BI Tools Used:
+* Cards
+* DAX measures
+* Slicer
+* Graphs (Bar, Line, Pie)
+
+## Pivot Tables
+Default:
+![Image of pivot table with no age group selected](https://github.com/chetputt/healthcare-analytics-dashboard/blob/main/pivot%20table%20images/default%20pivot%20tables.png)
+
+<details>
+ <summary>Filtered Data</summary>
+18-30 age group selected:
+ 
+![Image of pivot table with 18-30 age group selected](https://github.com/chetputt/healthcare-analytics-dashboard/blob/main/pivot%20table%20images/18-30%20pivot%20tables.png)
+**Note that only the department pivot table is affected**
+</details>
 
 ## Dashboard
+Default:
+![Image of healthcare dashboard with no slicer or group selected](https://github.com/chetputt/healthcare-analytics-dashboard/blob/main/dashboard%20images/default%20dashboard.png)
+
+<details>
+ <summary>Filtered Data</summary>
+ 
+Cardiology department selected:
+![Image of healthcare dashboard with 'Cardiology' department selected](https://github.com/chetputt/healthcare-analytics-dashboard/blob/main/dashboard%20images/cardiology-selected%20dashboard.png)
+
+Therapy treatment selected:
+![Image of healthcare dashboard with the 'Therapy' treatment selected](https://github.com/chetputt/healthcare-analytics-dashboard/blob/main/dashboard%20images/therapy-selected%20dashboard.png)
+</details>
 
 ## Key Insights
+* Orthopedics had the most number of patients with 1,058, though each department had a similar number (around 1000)
+* Most patients were in the 31-45 age group
+* The "General Medicine" department had the highest peak of visitors being admitted (62 admitted at 12 AM)
+* Overall distributions (averages, age group, treatment type, and region) were even across the departments
+
+## Business Recommendations
+1. Maintain the current spread of resource allocation across all departments and increase evenly as needed
+2. Prioritize services, equipment, and staff for middle-aged people
+
+## Weaknesses of This Analysis
+I noticed that most of my dashboard and the pivot tables focused on statistics from a static point in time. In the future, I could try to focus on using **dates** and **trends** to improve my chances of finding insights. 
+
+Another area I could work on is cutting out noise. From this dataset, I did not use the "visit_type" or "readmission_risk" columns for any analysis, and I could have simply dropped those columns before creating my visuals and tables.
