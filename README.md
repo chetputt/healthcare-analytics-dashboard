@@ -11,6 +11,13 @@ A regional hospital system is experiencing increasing patient volume in its emer
 ## Dataset
 The Kaggle link for this project's dataset can be found [here](https://www.kaggle.com/datasets/abbas829/healthcare-patient-analytics-dataset/data).
 
+<details>
+  <summary>Image of dataset (after modification)</summary>
+  
+  ![Image of dataset in Excel after modification](https://github.com/chetputt/healthcare-analytics-dashboard/blob/main/dataset%20image%20(modified).png)
+  
+</details>
+
 ## Tech Stack
 * Excel
 * Power BI (Desktop)
@@ -59,6 +66,7 @@ Therapy treatment selected:
 </details>
 
 ## Key Insights
+* Neurology had the highest average treatment cost
 * Orthopedics had the most number of patients with 1,058, though each department had a similar number (around 1000)
 * Most patients were in the 31-45 age group
 * The "General Medicine" department had the highest peak of visitors being admitted (62 admitted at 12 AM)
